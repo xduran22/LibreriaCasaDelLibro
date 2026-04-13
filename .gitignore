@@ -1,0 +1,23 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+db.sqlite3
+
+# PHP / Yii2
+/vendor/
+/web/assets/
+/runtime/
+.phpunit.result.cache
+
+# Logs y bases de datos
+*.log
+*.sql
+*.sqlite
+
+# Sistema y Editores
+.DS_Store
+.vscode/
+.idea/
