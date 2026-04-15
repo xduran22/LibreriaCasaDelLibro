@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Librería Casa del Libro{% endblock %}</title>
-</head>
-<body>
-    <header>
-        <h1>Librería Casa del Libro</h1>
-        <nav>
-            <ul>
-       
-            </ul>
-        </nav>
-    </header>
-    <main>
-        {% block content %}
-        <!-- Contenido específico de cada página -->
-        {% endblock %}
-    </main> 
-    <footer>
-        <p>&copy; 2024 Librería Casa del Libro. Todos los derechos reservados.</p>
-    </footer>
+<!-- @format -->
 
-</html>
+{% extends 'base.html' %} {% block content %}
+<h1>Catálogo de Libros</h1>
+
+<ul>
+  {% for libro in libros %}
+  <li>
+    <a href="{% url 'detalle_libro' libro.id %}"> {{ libro.titulo }} </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

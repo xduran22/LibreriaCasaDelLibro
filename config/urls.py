@@ -6,7 +6,7 @@ from config import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('catalogo_libros.urls')),
+    path('libros', include('catalogo_libros.urls')),
 ]
 
 # Esto es lo que permite que el CSS se vea en desarrollo
