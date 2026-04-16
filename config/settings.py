@@ -17,8 +17,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 import mimetypes
 
-mimetypes.add_type("text/css", ".css", True)
-mimetypes.add_type("application/javascript", ".js", True)
 
 
 # Quick-start development settings - unsuitable for production

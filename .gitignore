@@ -21,3 +21,7 @@ db.sqlite3
 .DS_Store
 .vscode/
 .idea/
+
+
+# Django static compiled
+/staticfiles/
