@@ -11,7 +11,7 @@ Libros{% endblock %} {% block content %}
       {% if libro.imagen %}
       <img src="{{ libro.imagen.url }}" alt="{{ libro.nombreLibro }}" />
       {% else %}
-      <img src="{% static 'img/logo.jpg' %}" alt="Sin portada" />
+      <img src="{% static 'img/default.jpg' %}" alt="Sin portada" />
       {% endif %}
 
       <h3>{{ libro.nombreLibro }}</h3>
