@@ -14,9 +14,16 @@ class Editora(models.Model):
     def __str__(self):
         return self.nombreEditora
     
+class Generos(models.Model):
+    tipoGenero = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.tipoGenero
+    
 class Libros(models.Model):
     nombreLibro = models.CharField(max_length=50)
     autor = models.ForeignKey(Autor, on_delete=models.CASCADE, null=False)
+    genero = models.ForeignKey(Generos, on_delete=models.CASCADE, null=True)
     editora = models.ForeignKey(Editora, on_delete=models.CASCADE, null=False)
     precio = models.DecimalField(max_digits=10, decimal_places=2)
     fechaPublicacion = models.DateField()
