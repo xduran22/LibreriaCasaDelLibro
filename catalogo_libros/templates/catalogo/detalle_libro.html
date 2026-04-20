@@ -99,7 +99,10 @@ libro.nombreLibro }}{% endblock %} {% block content %}
           <strong>Autor:</strong> {{ libro.autor.nombre }} {{
           libro.autor.apellido }}
         </p>
-      </div>
+        <p class="genero-libro">
+          <strong>Género:</strong> {{ libro.genero.tipoGenero }}
+        </p>
+      </>
 
       <div class="precio-detalle">
         <p><strong>Precio:</strong> $ {{ libro.precio }}</p>
