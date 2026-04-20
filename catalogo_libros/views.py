@@ -20,7 +20,8 @@ def crearLibro(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Libro creado exitosamente.')
-            return redirect('libros')   
+            form = LibrosForm()
+            return redirect('crearLibro')  # Redirige a la misma página para mostrar el formulario vacío después de guardar
         else:
             print(form.errors)  # Esto imprimirá los errores en la consola para depuración
             messages.error(request, 'Corrige errores en rojo')
